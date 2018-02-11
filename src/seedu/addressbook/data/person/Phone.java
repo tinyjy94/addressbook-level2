@@ -12,7 +12,7 @@ public class Phone {
     public static final String MESSAGE_PHONE_CONSTRAINTS = "Person phone numbers should only contain numbers";
     public static final String PHONE_VALIDATION_REGEX = "\\d+";
 
-    public final String value;
+    private final String value;
     private boolean isPrivate;
 
     /**
@@ -45,7 +45,7 @@ public class Phone {
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof Phone // instanceof handles nulls
-                && this.value.equals(((Phone) other).value)); // state check
+                && this.toString().equals(((Phone) other).toString())); // state check
     }
 
     @Override
@@ -56,4 +56,6 @@ public class Phone {
     public boolean isPrivate() {
         return isPrivate;
     }
+
+
 }

@@ -16,7 +16,7 @@ public class Birthday {
                 + "|((0[1-9]|1\\d|2[0-8])[-]02[-]((1[6-9]|[2-9]\\d)\\d{2}))|(29[-]02[-]((1[6-9]|[2-9]\\d)"
                 + "(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))";
 
-    public final String value;
+    private final String value;
     private boolean isPrivate;
 
     /**
@@ -49,7 +49,7 @@ public class Birthday {
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof Birthday // instanceof handles nulls
-                && this.value.equals(((Birthday) other).value)); // state check
+                && this.toString().equals(((Birthday) other).toString())); // state check
     }
 
     @Override
@@ -61,5 +61,6 @@ public class Birthday {
     public boolean isPrivate() {
         return isPrivate;
     }
+
 }
 
