@@ -50,7 +50,7 @@ public class Phone {
 
     @Override
     public int hashCode() {
-        return toString().hashCode();
+        return value.hashCode();
     }
 
     public boolean isPrivate() {

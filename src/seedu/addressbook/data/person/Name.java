@@ -57,7 +57,7 @@ public class Name {
 
     @Override
     public int hashCode() {
-        return toString().hashCode();
+        return fullName.hashCode();
     }
 
 }

@@ -54,7 +54,7 @@ public class Birthday {
 
     @Override
     public int hashCode() {
-        return toString().hashCode();
+        return value.hashCode();
     }
 
 
