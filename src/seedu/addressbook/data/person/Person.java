@@ -77,8 +77,7 @@ public class Person implements ReadOnlyPerson {
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof ReadOnlyPerson // instanceof handles nulls
-                && this.hasSameData((ReadOnlyPerson) other)
-);
+                && this.hasSameData((ReadOnlyPerson) other));
     }
     @Override
     public int hashCode() {
